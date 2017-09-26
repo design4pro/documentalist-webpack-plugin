@@ -1,12 +1,19 @@
 # Change Log
 
-<a name="0.0.1"></a>
-## 0.0.1 (2017-09-26)
+<a name="0.0.2"></a>
+## [0.0.2](https://github.com/design4pro/documentalist-webpack-plugin/tree/v0.0.2) (2017-09-26)
 
-[Full Changelog](https://github.com/design4pro/documentalist-webpack-plugin/compare/...v0.0.1)
+[Full Changelog](https://github.com/design4pro/documentalist-webpack-plugin/compare/v0.0.1...v0.0.2)
+
+
+<a name="0.0.1"></a>
+## [0.0.1](https://github.com/design4pro/documentalist-webpack-plugin/tree/v0.0.1) (2017-09-26)
+
+[Full Changelog](https://github.com/design4pro/documentalist-webpack-plugin/compare/b70f480...v0.0.1)
 
 
 ### Chores
 
 * **package:** initial commit ([b532ab0](https://github.com/design4pro/documentalist-webpack-plugin/commit/b532ab0))<br>
 * **package:** initial commit ([b70f480](https://github.com/design4pro/documentalist-webpack-plugin/commit/b70f480))<br>
+* **release:** 0.0.1 ([64d78c2](https://github.com/design4pro/documentalist-webpack-plugin/commit/64d78c2))<br>
