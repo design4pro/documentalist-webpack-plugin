@@ -1,0 +1,1 @@
+# SassDocs Webpack Plugin
