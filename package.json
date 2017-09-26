@@ -1,6 +1,6 @@
 {
   "name": "documentalist-webpack-plugin",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Documentalist WebPack Plugin",
   "main": "index.js",
   "scripts": {
