@@ -8,25 +8,7 @@
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": {
-    "name": "Rafał Wolak",
-    "email": "r.wolak@design4.pro",
-    "url": "https://www.design4.pro"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/design4pro/documentalist-webpack-plugin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/design4pro/documentalist-webpack-plugin/issues/"
-  },
   "homepage": "https://github.com/design4pro/documentalist-webpack-plugin#readme",
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-release-me"
-    }
-  },
   "devDependencies": {
     "codecov": "^2.2.0",
     "commitizen": "^2.9.6",
@@ -38,5 +20,26 @@
     "documentalist": "^0.0.8",
     "highlights": "^3.0.1",
     "marked": "^0.3.6"
-  }
+  },
+  "engines": {
+    "node": ">=6.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-release-me"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/design4pro/documentalist-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/design4pro/documentalist-webpack-plugin/issues/"
+  },
+  "author": {
+    "name": "Rafał Wolak",
+    "email": "r.wolak@design4.pro",
+    "url": "https://www.design4.pro"
+  },
+  "license": "MIT"
 }

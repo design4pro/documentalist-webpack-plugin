@@ -1,1 +1,4 @@
-# SassDocs Webpack Plugin
+# Documentalist webpack plugin
+
+### Install
+> yarn add documentalist
