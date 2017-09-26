@@ -1,7 +1,6 @@
 "use strict";
 
 var dm = require('documentalist');
-var yaml = require('js-yaml');
 var path = require('path');
 var fs = require('fs');
 var text = require("./util/text");
@@ -19,7 +18,7 @@ DocumentalistPlugin.prototype.apply = function(compiler) {
                     renderer: text.renderer
                 },
                 // must mark our @Decorator APIs as reserved so we can use them in code samples
-                reservedTags: ["import", "ContextMenuTarget", "HotkeysTarget"],
+                reservedTags: ["import", "ContextMenuTarget", "HotkeysTarget"]
             })
             .use(".md", new dm.MarkdownPlugin({
                 navPage: self.options.navPage

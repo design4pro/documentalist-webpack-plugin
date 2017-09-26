@@ -45,7 +45,7 @@ renderer.code = function(textContent, language) {
 module.exports = {
     // return a vinyl-source-stream with the given filename and write the contents to it.
     toFile: function(filename, contents) {
-        return fs.writeFileSync(filename, contents, "utf8");;
+        return fs.writeFileSync(filename, contents, "utf8");
     },
 
     // synchronously read and return string content of file.
@@ -63,5 +63,5 @@ module.exports = {
         });
     },
 
-    renderer,
+    renderer
 };
