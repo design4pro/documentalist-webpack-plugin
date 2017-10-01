@@ -1,17 +1,22 @@
 "use strict";
 
-const { Documentalist, MarkdownPlugin, TypescriptPlugin, KssPlugin } = require('documentalist');
+const { Documentalist, MarkdownPlugin, TypescriptPlugin, KssPlugin } = require("documentalist");
 const text = require("./lib/text");
 
-function DocumentalistPlugin(options) {
-    this.options = options;
-}
+class DocumentalistPlugin {
+    constructor(options = {}) {
+        const defaults = {
+            navPage: "_nav",
+            globs: "**/*",
+            filepath: "docs.json"
+        };
 
-DocumentalistPlugin.prototype.apply = (compiler) => {
-    var self = this;
+        this.options = Object.assign(defaults, options);
+    }
 
-    compiler.plugin('after-emit', (compilation, callback) => {
-        new Documentalist({
+    apply(compiler) {
+        compiler.plugin("after-emit", (compilation, callback) => {
+            new Documentalist({
                 markdown: {
                     renderer: text.renderer
                 },
@@ -19,7 +24,7 @@ DocumentalistPlugin.prototype.apply = (compiler) => {
                 reservedTags: ["import", "ContextMenuTarget", "HotkeysTarget"]
             })
             .use(".md", new MarkdownPlugin({
-                navPage: self.options.navPage
+                navPage: this.options.navPage
             }))
             .use(/\.d\.ts$/, new TypescriptPlugin({
                 excludeNames: [/Factory$/, /^I.+State$/],
@@ -27,18 +32,19 @@ DocumentalistPlugin.prototype.apply = (compiler) => {
                 includeDefinitionFiles: true
             }))
             .use(".scss", new KssPlugin())
-            .documentGlobs("packages/*/src/**/*", "packages/*/dist/index.d.ts")
+            .documentGlobs(...this.options.globs)
             .then((docs) => JSON.stringify(docs, null, 2))
             .then((content) => {
-                text.toFile(self.options.filepath, content);
+                text.toFile(this.options.filepath, content);
 
-                console.log('Your documentation has been parsed!');
+                console.log("Your documentation has been parsed!");
                 callback();
             })
             .then((error) => {
                 if (error) throw error;
             });
-    });
-};
+        });
+    }
+}
 
 module.exports = DocumentalistPlugin;
