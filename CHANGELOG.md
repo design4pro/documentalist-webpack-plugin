@@ -1,9 +1,25 @@
 # Change Log
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/design4pro/documentalist-webpack-plugin/tree/v0.2.0) (2017-10-01)
+
+[Full Changelog](https://github.com/design4pro/documentalist-webpack-plugin/compare/v0.1.0...v0.2.0)
+
+
+### Features
+
+* **package:** custom options ([c6cf44f](https://github.com/design4pro/documentalist-webpack-plugin/commit/c6cf44f))<br>
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/design4pro/documentalist-webpack-plugin/tree/v0.1.0) (2017-09-26)
 
 [Full Changelog](https://github.com/design4pro/documentalist-webpack-plugin/compare/v0.0.2...v0.1.0)
+
+
+### Chores
+
+* **release:** 0.1.0 ([88737c6](https://github.com/design4pro/documentalist-webpack-plugin/commit/88737c6))<br>
 
 
 ### Features
