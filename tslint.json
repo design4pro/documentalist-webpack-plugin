@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "tslint:latest"
+  ],
+  "rules": {
+    "max-classes-per-file": false,
+    "no-console": [
+      false
+    ],
+    "no-string-literal": false,
+    "variable-name": [
+      true,
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ]
+  },
+  "jsRules": {
+    "no-console": [
+      false
+    ]
+  }
+}
