@@ -1,29 +1,20 @@
-"use strict";
+const { Documentalist, MarkdownPlugin, TypescriptPlugin } = require("documentalist");
+const SassdocPlugin = require("./lib/sassdoc");
+const text = require("./lib/text");
 
-import { Documentalist, MarkdownPlugin, TypescriptPlugin, KssPlugin } from "documentalist";
-import text from "./lib/text";
-
-export interface IDocumentalistPluginOptions {
-    navPage: string;
-    globs: string[];
-    filepath: string;
-}
-
-export class DocumentalistPlugin {
-    private options: IDocumentalistPluginOptions;
-
-    public constructor(private pluginOptions: IDocumentalistPluginOptions) {
+class DocumentalistPlugin {
+    constructor(options = {}) {
         const defaults = {
-            navPage: "_nav",
+            filepath: "docs.json",
             globs: "**/*",
-            filepath: "docs.json"
+            navPage: "_nav",
         };
 
-        this.options = Object.assign(defaults, this.pluginOptions);
+        this.options = Object.assign(defaults, options);
     }
 
-    public apply(compiler: any) {
-        compiler.plugin("after-emit", (compilation: any, callback: any) => {
+    apply(compiler) {
+        compiler.plugin("after-emit", (compilation, callback) => {
             new Documentalist({
                 markdown: {
                     renderer: text.renderer
@@ -39,18 +30,20 @@ export class DocumentalistPlugin {
                 excludePaths: ["node_modules/", "core/typings"],
                 includeDefinitionFiles: true
             }))
-            .use(".scss", new KssPlugin({}))
+            .use(".scss", new SassdocPlugin({}))
             .documentGlobs(...this.options.globs)
-            .then(docs => JSON.stringify(docs, null, 2))
-            .then(content => {
+            .then((docs) => JSON.stringify(docs, null, 2))
+            .then((content) => {
                 text.toFile(this.options.filepath, content);
 
                 console.log("Your documentation has been parsed!");
                 callback();
             })
-            .catch(error => {
+            .catch((error) => {
                 compilation.errors.push(error);
             });
         });
     }
 }
+
+module.exports = DocumentalistPlugin;
