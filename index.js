@@ -1,3 +1,5 @@
+"use strict";
+
 const { Documentalist, MarkdownPlugin, TypescriptPlugin } = require("documentalist");
 const SassdocPlugin = require("./lib/sassdoc");
 const text = require("./lib/text");
@@ -30,7 +32,7 @@ class DocumentalistPlugin {
                 excludePaths: ["node_modules/", "core/typings"],
                 includeDefinitionFiles: true
             }))
-            .use(".scss", new SassdocPlugin({}))
+            .use(".scss", new SassdocPlugin())
             .documentGlobs(...this.options.globs)
             .then((docs) => JSON.stringify(docs, null, 2))
             .then((content) => {
