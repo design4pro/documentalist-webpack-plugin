@@ -1,7 +1,7 @@
 "use strict";
 
 const { Documentalist, MarkdownPlugin, TypescriptPlugin } = require("documentalist");
-const SassdocPlugin = require("./lib/sassdoc");
+const SassdocPlugin = require("documentalist-sassdoc");
 const text = require("./lib/text");
 
 class DocumentalistPlugin {

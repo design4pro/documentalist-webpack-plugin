@@ -19,6 +19,7 @@
   "dependencies": {
     "better-handlebars": "github:wmeldon/better-handlebars",
     "documentalist": "^0.0.8",
+    "documentalist-sassdoc": "^0.0.1",
     "highlights": "^3.0.1",
     "language-less": "github:atom/language-less",
     "language-typescript": "github:giladgray/language-typescript#10.1.15",
