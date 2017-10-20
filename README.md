@@ -1,4 +1,4 @@
 # Documentalist webpack plugin
 
 ### Install
-> yarn add documentalist
+> yarn add documentalist-webpack-plugin
