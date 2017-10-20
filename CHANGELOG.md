@@ -1,9 +1,29 @@
 # Change Log
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/design4pro/documentalist-webpack-plugin/tree/v0.2.1) (2017-10-20)
+
+[Full Changelog](https://github.com/design4pro/documentalist-webpack-plugin/compare/v0.2.0...v0.2.1)
+
+
+### WIP
+
+* documentalist-sassdoc ([a48c0f1](https://github.com/design4pro/documentalist-webpack-plugin/commit/a48c0f1))<br>
+* Sassdoc Plugin ([e217b09](https://github.com/design4pro/documentalist-webpack-plugin/commit/e217b09))<br>
+* SassDoc plugin ([a9a8420](https://github.com/design4pro/documentalist-webpack-plugin/commit/a9a8420))<br>
+* SassDoc plugin ([1276f6d](https://github.com/design4pro/documentalist-webpack-plugin/commit/1276f6d))<br>
+* typescript ([e8d10a2](https://github.com/design4pro/documentalist-webpack-plugin/commit/e8d10a2))<br>
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/design4pro/documentalist-webpack-plugin/tree/v0.2.0) (2017-10-01)
 
 [Full Changelog](https://github.com/design4pro/documentalist-webpack-plugin/compare/v0.1.0...v0.2.0)
+
+
+### Chores
+
+* **release:** 0.2.0 ([1b6c929](https://github.com/design4pro/documentalist-webpack-plugin/commit/1b6c929))<br>
 
 
 ### Features
