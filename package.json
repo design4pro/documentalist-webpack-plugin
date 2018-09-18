@@ -14,7 +14,7 @@
     "commitizen": "2.10.1",
     "cz-release-me": "1.6.1",
     "nyc": "11.9.0",
-    "release-me": "1.4.1"
+    "release-me": "1.4.2"
   },
   "dependencies": {
     "better-handlebars": "github:wmeldon/better-handlebars",
