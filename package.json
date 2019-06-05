@@ -11,7 +11,7 @@
   "homepage": "https://github.com/design4pro/documentalist-webpack-plugin#readme",
   "devDependencies": {
     "codecov": "3.1.0",
-    "commitizen": "3.0.2",
+    "commitizen": "3.1.1",
     "cz-release-me": "1.6.1",
     "nyc": "14.1.1",
     "release-me": "1.4.2"
