@@ -23,7 +23,7 @@
     "highlights": "^3.0.1",
     "language-less": "github:atom/language-less",
     "language-typescript": "github:giladgray/language-typescript#10.1.15",
-    "marked": "^0.6.0",
+    "marked": "^0.7.0",
     "sassdoc": "^2.3.0"
   },
   "engines": {
